@@ -55,6 +55,6 @@ class ASRCodingModel():
         output = self.llm.structured_llm_call(smooth_transcription)
 
         if output.isValid == False:
-            return output.errorMessage
+            return False, output.errorMessage
         else:
-            return '\n'.join(output.commandList)
+            return True, '\n'.join(output.commandList)
