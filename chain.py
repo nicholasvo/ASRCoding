@@ -80,7 +80,13 @@ commands = {
     "dent": "[indent]",
     "tab": "[indent]",
     "unindent": "[unindent]",
-    "backspace": "[backspace]"
+    "backspace": "[backspace]",
+    "run program": "[run]",
+    "run": "[run]",
+    "reset": "[reset]",
+    "reset program": "[reset]",
+    "enter": "[return]",
+    "return": "[return]"
 }
 
 class Filter(BaseModel):

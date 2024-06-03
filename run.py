@@ -15,8 +15,10 @@ class KarelIDE:
         self.asrCodingModel = ASRCodingModel()
         self.text_area = None
         
-    def transcribe_and_input(self, filename='recorded_audio'):
-        audio = record_audio(filename=filename)
+    def transcribe_and_input(self, filename='recorded_audio', type="standard"):
+
+        duration = 10 if type == "standard" else 3
+        audio = record_audio(filename=filename, duration=duration)
         isValid, transcription = self.asrCodingModel.transcribe(filename)
         
         if not isValid:
@@ -32,15 +34,25 @@ class KarelIDE:
             self.text_area.send_keys(Keys.DOWN)
         
         for line in transcription.split('\n'):
-            self.text_area.send_keys(Keys.RETURN)
+
+            # Check for Run or Reset Commands
+            if line == "[run]" or line == "[reset]":
+                self.run_program()
+                break
+
+            
             if line == "[indent]":
                 self.text_area.send_keys(Keys.TAB)
             elif line == "[unindent]":
                 self.text_area.send_keys(Keys.SHIFT, Keys.TAB)
             elif line == "[backspace]":
                 self.text_area.send_keys(Keys.BACKSPACE)
+            elif line == "[return]":
+                self.text_area.send_keys(Keys.RETURN)
             else:
+                self.text_area.send_keys(Keys.RETURN)
                 self.text_area.send_keys(line)
+                
             time.sleep(1)
         
         print("Transcription inputted to IDE.")
@@ -56,16 +68,19 @@ class KarelIDE:
         
 def command_loop(ide):
     while True:
-        command = input("Enter command (record, run, stop): ").strip().lower()
+        command = input("Enter command (record, record_continuous, run, stop): ").strip().lower()
         if command == 'record':
             ide.transcribe_and_input()
+        elif command == 'record_continuous':
+            while True:
+                ide.transcribe_and_input(type="continuous")
         elif command == 'run':
             ide.run_program()
         elif command == 'stop':
             ide.close_browser()
             break
         else:
-            print("Unknown command. Please enter 'record', 'run', or 'stop'.")
+            print("Unknown command. Please enter 'record', 'record_continuous', 'run', or 'stop'.")
 
 def main():
     ide = KarelIDE()

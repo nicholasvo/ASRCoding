@@ -8,3 +8,4 @@ nltk
 sounddevice
 scipy
 webdriver-manager
+jiwer
