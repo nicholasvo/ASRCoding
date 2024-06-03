@@ -4,7 +4,7 @@ from chain import *
 
 vocab = ["move", "turn", "left", "pick", "beeper", "put", "underscore", "for", "range", 
          "front", "clear", "present", "bag", "beepers", "blocked", "while", 
-         "indent", "return", "unindent", "backspace"]
+         "indent", "return", "unindent", "backspace", "tab"]
 
 class ASRCodingModel():
     def __init__(self, model_type = "base.en"):
