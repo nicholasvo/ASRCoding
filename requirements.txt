@@ -1,0 +1,9 @@
+git+https://github.com/openai/whisper.git
+langchain 
+langchain_core 
+langchain_openai
+numpy
+selenium
+nltk
+sounddevice
+scipy
