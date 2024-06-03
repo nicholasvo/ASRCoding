@@ -24,10 +24,12 @@ class KarelIDE:
             return
         
         # Select text area
-        if self.text_area != self.driver.find_element(By.CSS_SELECTOR, ".ace_text-input"):
-            self.text_area = self.driver.find_element(By.CSS_SELECTOR, ".ace_content")
-            self.text_area.click()
-            self.text_area = self.driver.find_element(By.CSS_SELECTOR, ".ace_text-input")
+        self.text_area = self.driver.find_element(By.CSS_SELECTOR, ".ace_content")
+        self.text_area.click()
+        self.text_area = self.driver.find_element(By.CSS_SELECTOR, ".ace_text-input")
+
+        for i in range(100):
+            self.text_area.send_keys(Keys.DOWN)
         
         for line in transcription.split('\n'):
             self.text_area.send_keys(Keys.RETURN)
