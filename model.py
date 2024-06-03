@@ -2,7 +2,9 @@ import whisper
 import nltk
 from chain import *
 
-vocab = ["move", "turn", "left", "pick", "beeper", "put", "underscore", "for", "range", "front", "clear", "present", "bag", "in", "beepers", "blocked", "if", "while", "indent", "return"]
+vocab = ["move", "turn", "left", "pick", "beeper", "put", "underscore", "for", "range", 
+         "front", "clear", "present", "bag", "beepers", "blocked", "while", 
+         "indent", "return", "unindent", "backspace"]
 
 class ASRCodingModel():
     def __init__(self, model_type = "base.en"):
@@ -50,6 +52,8 @@ class ASRCodingModel():
 
         # Smooth transcription
         smooth_transcription = self.smooth_levenshtein(raw_transcription, 1)
+
+        print(smooth_transcription)
 
         # Filter response type
         output = self.llm.structured_llm_call(smooth_transcription)

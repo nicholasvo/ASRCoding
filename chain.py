@@ -5,9 +5,13 @@ from langchain_core.prompts.few_shot import FewShotPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
 
 prompt_beginning = "Given this transcription: "
-prompt_end = """Convert the transcription to a list of ordered commands .The transcribed commands should only exist within this mappping. If they are not, it is an invalid mapping.
-The only exception is when an integer is specified after the "for i in range" command. In this case, the command mapping should map
-to "for i in range(specified_integer_value):" where specified_integer_value is the integer following the raw transcript that maps to the "for i in range" command.
+prompt_end = """Convert the transcription to a list of ordered commands. The transcribed commands should only exist within this mappping. If they are not, it is an invalid mapping.
+The only exceptions are:
+- when an integer is specified after the "for i in range" command. In this case, the command mapping should map
+to "for i in range(specified_integer_value):" where specified_integer_value is the integer following the raw transcript that maps to the "for i in range" command. If the integer is 
+in plain text, convert it to a number.
+- when a condition is specified after "if" or "while". In this case, you should map to "if (condition):" or "while (condition):".
+
 Return as a JSON for the keys 'isValid' if there is a valid mapping, 'commandList' for the list of commands, and 'errorMessage'
 which is a string that describes why the mapping is invalid."""
 
@@ -71,7 +75,11 @@ commands = {
     "while": "while",
     # Expansion for commands
     "indent": "[indent]",
-    "unindent": "[backspace]"
+    "in dent": "[indent]",
+    "dent": "[indent]",
+    "tab": "[indent]",
+    "unindent": "[unindent]",
+    "backspace": "[backspace]"
 }
 
 class Filter(BaseModel):
