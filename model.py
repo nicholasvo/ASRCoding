@@ -53,10 +53,12 @@ class ASRCodingModel():
         # Smooth transcription
         smooth_transcription = self.smooth_levenshtein(raw_transcription, 1)
 
-        print(smooth_transcription)
+        print("Smoothed Transcript: " + smooth_transcription)
 
         # Filter response type
         output = self.llm.structured_llm_call(smooth_transcription)
+
+        print("Refined Transcript: " + output.refinedTranscript)
 
         if output.isValid == False:
             return False, output.errorMessage

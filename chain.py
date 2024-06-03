@@ -5,15 +5,16 @@ from langchain_core.prompts.few_shot import FewShotPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
 
 prompt_beginning = "Given this transcription: "
-prompt_end = """Convert the transcription to a list of ordered commands. The transcribed commands should only exist within this mappping. If they are not, it is an invalid mapping.
+prompt_end = """First, look over the transcription and create a refined transcription by reasonably matching to the keys of the mappings. It is okay if it does not match.
+Then, convert the refined transcription to a list of ordered commands which are the values of the mappings. The transcribed commands should only exist within this mappping. If they are not, it is an invalid mapping.
 The only exceptions are:
 - when an integer is specified after the "for i in range" command. In this case, the command mapping should map
 to "for i in range(specified_integer_value):" where specified_integer_value is the integer following the raw transcript that maps to the "for i in range" command. If the integer is 
 in plain text, convert it to a number.
 - when a condition is specified after "if" or "while". In this case, you should map to "if condition:" or "while condition:" where condition is the condition specified.
 
-Return as a JSON for the keys 'isValid' if there is a valid mapping, 'commandList' for the list of commands, and 'errorMessage'
-which is a string that describes why the mapping is invalid."""
+Return as a JSON for the keys 'isValid' if there is a valid mapping, 'commandList' for the list of commands, 'refinedTranscript' for the refined transcription,
+and 'errorMessage' which is a string that describes why the mapping is invalid if it is invalid."""
 
 # Examples to include: correct-simple, correct-hard, invalid-simple, invalid-edge
 examples = [
@@ -86,6 +87,7 @@ class Filter(BaseModel):
     isValid: bool = Field(description="Whether the transcription has valid command mapping")
     errorMessage: str = Field(description="Error message describing what is wrong with mapping")
     commandList: list[str] = Field(description="List of commands from the transcription")
+    refinedTranscript: str = Field(description="Transcription after being refined to match with keys of mappings")
 
 class LLMChain():
     def __init__(self, model_name = "gpt-4o"):
