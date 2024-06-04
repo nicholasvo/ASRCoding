@@ -86,6 +86,250 @@
     {
       "filename": "022.wav",
       "transcription": "if right is clear move if front is blocked turn left"
+    },
+    {
+      "filename": "CS_224S_CM_ElevenLabs_Example_1.wav",
+      "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_2.wav",
+        "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_3.wav",
+        "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_4.wav",
+        "transcription": "for i in range 5 move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_5.wav",
+        "transcription": "for i in range 4 turn left"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_6.wav",
+        "transcription": "turn right move turn left for i in range 3 move pick beeper turn left turn left for i in range 3 move turn right move turn right"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_7.wav",
+        "transcription": "while front is clear move turn right move turn left move pick beeper turn left turn left while front is clear move turn right move turn right"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_8.wav",
+        "transcription": "while front is clear move turn right move turn left move pick beeper turn left turn left while front is clear move turn right move turn right"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_9.wav",
+        "transcription": "move move move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_10.wav",
+        "transcription": "move move move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_11.wav",
+        "transcription": "move move move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_12.wav",
+        "transcription": "move move pick beeper move turn left move move put beeper turn left turn left move move turn right move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_13.wav",
+        "transcription": "move move pick beeper move turn left move move put beeper turn left turn left move move turn right move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_14.wav",
+        "transcription": "move move pick beeper move turn left move move put beeper turn left turn left move move turn right move move move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_15.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_16.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_17.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_18.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_19.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_20.wav",
+        "transcription": "for i in range 10 put beeper while front is clear move for i in range 10 put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_21.wav",
+        "transcription": "for i in range 10 put beeper while front is clear move for i in range 10 put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_22.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_23.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_24.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_25.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_26.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_27.wav",
+        "transcription": "for i in range 10 indent put beeper while front is clear indent move for i in range 10 indent put beeper"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_28.wav",
+        "transcription": "turn left turn left turn left turn left"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_29.wav",
+        "transcription": "turn left turn left turn left turn left"
+    },
+    {
+        "filename": "CS_224S_CM_ElevenLabs_Example_30.wav",
+        "transcription": "turn left turn left turn left turn left"
+    },
+    {
+      "filename": "CS_224S_Cameron_Example_1.wav",
+      "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_2.wav",
+        "transcription": "move move turn right turn left move turn left turn left move move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_3.wav",
+        "transcription": "move move turn right move turn left move turn left turn left move move move turn right move turn right"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_4.wav",
+        "transcription": "move pick beeper move turn left turn left turn left turn left"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_5.wav",
+        "transcription": "move move pick beeper move turn left move move put beeper turn left turn left move move turn right move move move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_6.wav",
+        "transcription": "move move pick beeper move turn left move move put beeper turn left turn left move move turn right move move move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_7.wav",
+        "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_8.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_9.wav",
+        "transcription": "put beeper pick beeper move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_10.wav",
+        "transcription": "turn right move turn left move move move pick beeper turn left turn left move move move turn right move"
+    },
+    {
+        "filename": "CS_224S_Cameron_Example_11.wav",
+        "transcription": "move pick beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_1.wav",
+        "transcription": "for i in range 5 move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_2.wav",
+        "transcription": "for i in range 5 move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_3.wav",
+        "transcription": "move pick beeper move turn left move turn left turn left turn left move put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_4.wav",
+        "transcription": "move pick beeper move turn left move turn left turn left turn left move put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_5.wav",
+        "transcription": "move move move move move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_6.wav",
+        "transcription": "turn left move move move turn left turn left turn left move move move turn left turn left turn left move move move turn left"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_7.wav",
+        "transcription": "move pick beeper turn left move move turn left turn left turn left put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_8.wav",
+        "transcription": "move pick beeper turn left move move turn left turn left turn left put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_9.wav",
+        "transcription": "move pick beeper turn left move move for i in range 3 turn left put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_10.wav",
+        "transcription": "move pick beeper turn left move move for i in range 3 turn left put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_11.wav",
+        "transcription": "move pick beeper turn left for i in range 2 move for i in range 3 turn left put beeper move"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_12.wav",
+        "transcription": "turn left for i in range 3 move for i in range 3 turn left for i in range 3 move for i in range 3 turn left for i in range 3 move turn left"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_13.wav",
+        "transcription": "for i in range 10 put beeper while front is clear move for i in range 10 put beeper"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_14.wav",
+        "transcription": "for i in range 10 put beeper while front is clear: move for i in range 10 put beeper"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_15.wav",
+        "transcription": "put beeper for i in range 3 move put beeper"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_16.wav",
+        "transcription": "put beeper for i in range 3 move put beeper"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_17.wav",
+        "transcription": "for i in range 4 turn left"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_18.wav",
+        "transcription": "for i in range 4 turn left"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_19.wav",
+        "transcription": "for i in range 4 turn left"
+    },
+    {
+        "filename": "CS_224S_Patricia_Example_20.wav",
+        "transcription": "turn left turn left turn left turn left"
     }
   ]
   
