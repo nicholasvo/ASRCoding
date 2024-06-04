@@ -64,3 +64,19 @@ class ASRCodingModel():
             return False, output.errorMessage
         else:
             return True, '\n'.join(output.commandList)
+        
+    def transcribe_test(self, audio):
+        # Get Raw Transcription
+        raw_transcription = self.model.transcribe(audio)['text']
+
+        # Smooth transcription
+        smooth_transcription = self.smooth_levenshtein(raw_transcription, 1)
+
+        print("Smoothed Transcript: " + smooth_transcription)
+
+        # Filter response type
+        output = self.llm.structured_llm_call(smooth_transcription)
+
+        print("Refined Transcript: " + output.refinedTranscript)
+
+        return raw_transcription, smooth_transcription, output

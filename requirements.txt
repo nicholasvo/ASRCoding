@@ -9,3 +9,4 @@ sounddevice
 scipy
 webdriver-manager
 jiwer
+pydub

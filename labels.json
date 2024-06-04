@@ -1,0 +1,91 @@
+[
+    {
+      "filename": "001.wav",
+      "transcription": "move for i in range 10 indent move turn left move"
+    },
+    {
+      "filename": "002.wav",
+      "transcription": "move move while beepers present move"
+    },
+    {
+      "filename": "003.wav",
+      "transcription": "move turn left if front is clear"
+    },
+    {
+      "filename": "004.wav",
+      "transcription": "pick beeper put beeper while front is clear"
+    },
+    {
+      "filename": "005.wav",
+      "transcription": "turn underscore left move pick underscore beeper"
+    },
+    {
+      "filename": "006.wav",
+      "transcription": "if beepers present move if front is clear"
+    },
+    {
+      "filename": "007.wav",
+      "transcription": "for i in range five move turn left if left is clear"
+    },
+    {
+      "filename": "008.wav",
+      "transcription": "while front is clear move pick beeper"
+    },
+    {
+      "filename": "009.wav",
+      "transcription": "if no beepers in bag put beeper turn left"
+    },
+    {
+      "filename": "010.wav",
+      "transcription": "turn left move turn underscore left"
+    },
+    {
+      "filename": "011.wav",
+      "transcription": "for eye in range three move put underscore beeper"
+    },
+    {
+      "filename": "012.wav",
+      "transcription": "if front is blocked turn left if no beepers present"
+    },
+    {
+      "filename": "013.wav",
+      "transcription": "move backspace indent return"
+    },
+    {
+      "filename": "014.wav",
+      "transcription": "while beepers present pick beeper move"
+    },
+    {
+      "filename": "015.wav",
+      "transcription": "for i in range four move pick beeper if present"
+    },
+    {
+      "filename": "016.wav",
+      "transcription": "if front is clear move backspace run program"
+    },
+    {
+      "filename": "017.wav",
+      "transcription": "turn left move if front is blocked turn left indent"
+    },
+    {
+      "filename": "018.wav",
+      "transcription": "reset move pick underscore beeper"
+    },
+    {
+      "filename": "019.wav",
+      "transcription": "if left is clear turn left if right is blocked move"
+    },
+    {
+      "filename": "020.wav",
+      "transcription": "while front is clear move if no beepers in bag put beeper"
+    },
+    {
+      "filename": "021.wav",
+      "transcription": "for eye in range four move turn underscore left"
+    },
+    {
+      "filename": "022.wav",
+      "transcription": "if right is clear move if front is blocked turn left"
+    }
+  ]
+  
