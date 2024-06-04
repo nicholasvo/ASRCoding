@@ -5,25 +5,26 @@ from langchain_core.prompts.few_shot import FewShotPromptTemplate
 from langchain_core.prompts.prompt import PromptTemplate
 
 prompt_beginning = "Given this transcription: "
-prompt_end = """First, look over the transcription and create a refined transcription by reasonably matching to the keys of the mappings. It is okay if it does not match.
+prompt_end = """First, look over the transcription and create a refined transcription by reasonably matching to the keys of the mappings. Written numbers should also be turned into integers. It is okay if it does not match.
 Then, convert the refined transcription to a list of ordered commands which are the values of the mappings. The transcribed commands should only exist within this mappping. If they are not, it is an invalid mapping.
 The only exceptions are:
 - when an integer is specified after the "for i in range" command. In this case, the command mapping should map
 to "for i in range(specified_integer_value):" where specified_integer_value is the integer following the raw transcript that maps to the "for i in range" command. If the integer is 
 in plain text, convert it to a number.
 - when a condition is specified after "if" or "while". In this case, you should map to "if condition:" or "while condition:" where condition is the condition specified.
+- when a word or phrase is specified after "def" or "defined". In this case, you should map to "def word/phrase():" where word/phrase is the following word or phrase with _ if there are spaces.
 
-Return as a JSON for the keys 'isValid' if there is a valid mapping, 'commandList' for the list of commands, 'refinedTranscript' for the refined transcription,
+Return as a JSON for the keys 'isValid' if there is a valid mapping, 'commandList' for the list of commands, 'refinedTranscript' for the refined transcription as a string,
 and 'errorMessage' which is a string that describes why the mapping is invalid if it is invalid."""
 
-# Examples to include: correct-simple, correct-hard, invalid-simple, invalid-edge
+# Examples to include: correct-simple, correct-hard, invalid-simple, invalid-edge, commands
 examples = [
     {
         "question": (prompt_beginning + "move turn left pick beeper put beeper move move" + prompt_end),
         "answer": "Json(isValid: True, commandList: ['move()', 'turn_left()', 'pick_beeper()', 'put_beeper()', 'move()', 'move()'], errorMessage: )"
     },
     {
-        "question": (prompt_beginning + "move turn left for i in range ten" + prompt_end),
+        "question": (prompt_beginning + "move turn underscore left for i in range ten" + prompt_end),
         "answer": "Json(isValid: True, commandList: ['move()', 'turn_left()', 'for i in range(10):'], errorMessage: )"
     },
     {
@@ -34,6 +35,10 @@ examples = [
         "question": (prompt_beginning + "I want to move up and turn right then turn left and then have a for loop that loops twelve times" + prompt_end),
         "answer": "Json(isValid: False, commandList: [], errorMessage: 'Invalid commands entered. Please respond according to the vocabulary and commands mappings')"
     },
+    {
+        "question": (prompt_beginning + "move for i in range 10 indent move turn left move" + prompt_end),
+        "answer": "Json(isValid: True, commandList: ['move()', 'for i in range(10):', '[indent]', 'move()', 'turn_left()', 'move()'], errorMessage: )"
+    }
 ]
 
 example_prompt = PromptTemplate(
@@ -52,6 +57,7 @@ commands = {
     "turn left": "turn_left()",
     "pick beeper": "pick_beeper()",
     "put beeper": "put_beeper()",
+    "turn right": "turn_right()",
     # Added after testing
     "turn underscore left": "turn_left()",
     "pick underscore beeper": "pick_beeper()",
@@ -74,6 +80,8 @@ commands = {
     "if": "if",
     "else": "else:",
     "while": "while",
+    "define": "def",
+    "def": "def",
     # Expansion for commands
     "indent": "[indent]",
     "in dent": "[indent]",

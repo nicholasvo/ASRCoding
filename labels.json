@@ -25,7 +25,7 @@
     },
     {
       "filename": "007.wav",
-      "transcription": "for i in range five move turn left if left is clear"
+      "transcription": "for i in range 5 move turn left if left is clear"
     },
     {
       "filename": "008.wav",
@@ -57,7 +57,7 @@
     },
     {
       "filename": "015.wav",
-      "transcription": "for i in range four move pick beeper if present"
+      "transcription": "for i in range 4 move pick beeper if present"
     },
     {
       "filename": "016.wav",

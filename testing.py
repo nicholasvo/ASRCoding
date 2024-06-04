@@ -35,6 +35,8 @@ def main():
         num_tasks += 1
         if output.isValid == True:
             num_success += 1
+        else:
+            print("Invalid")
 
     # Word error rates
     raw_wer = jiwer.wer(gold_labels, raw_predictions)
