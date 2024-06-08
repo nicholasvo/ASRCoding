@@ -123,7 +123,7 @@ def command_loop(ide):
             ide.transcribe_sample(filename='./audio_files/CS_224S_CM_ElevenLabs_Example_26.wav', type="standard")
             ide.run_program()
         else:
-            print("Unknown command. Please enter 'record', 'record_continuous', 'run', or 'stop'.")
+            print("Unknown command. Please enter 'record', 'record_continuous','run_sample', 'run', or 'stop'.")
 
 def main():
     ide = KarelIDE()
