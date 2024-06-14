@@ -108,7 +108,7 @@ class KarelIDE:
         
 def command_loop(ide):
     while True:
-        command = input("Enter command (record, record_continuous, run, stop): ").strip().lower()
+        command = input("Enter command (record, record_continuous, run_sample, run, stop): ").strip().lower()
         if command == 'record':
             ide.transcribe_and_input()
         elif command == 'record_continuous':
